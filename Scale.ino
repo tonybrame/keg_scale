@@ -23,7 +23,8 @@ float currentReading[4] = { 0.0, 0.0, 0.0, 0.0 };
  
 int rbutton = 18; // this button will be used to reset the scale to 0. Not used.
 const float calibration_factor = 10000; // seems to get me lbs right on
-const float notifyVariance = 0.1; //only send notifications after a weight change of this scale - accuracy could suffer since I'm not doing constant updates +/- .1 lb. 
+//fouynd that there is a +/- .5 lb variance when keg is just sitting, so increasing this from .1 to .5 - A pint pour is 1 lb, so we should still catch pours.
+const float notifyVariance = 0.5; //only send notifications after a weight change of this scale - accuracy could suffer since I'm not doing constant updates +/- .1 lb. 
 
 
 const char* ssid = "Brame Network_2GEXT";
